@@ -31,5 +31,9 @@ jobs:
           git commit -am "fix: Documentation => Documentation~"
         fi
         git push -f -u origin upm
+        git checkout main
+        git checkout upm README.md
+        git commit -am "Copy README.md to upm branch"
+        git push origin upm
       env:
         PKG_ROOT: Packages/com.kevincastejon.missingfeatures
