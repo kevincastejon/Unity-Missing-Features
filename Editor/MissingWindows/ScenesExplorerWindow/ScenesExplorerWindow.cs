@@ -14,7 +14,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         private float _size = 50f;
         List<SceneAsset> _scenes; 
         string[] _paths;
-        [MenuItem("Window/UnityMissingWindows/Scenes Explorer Window", false, 222)]
+        [MenuItem("Window/Unity Missing Windows/Scenes Explorer Window", false, 222)]
         internal static void OpenWindow()
         {
             EditorWindow window = GetWindow(typeof(ScenesExplorerWindow));

@@ -17,7 +17,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         private SerializedProperty _queriesHitTrigger;
         private SerializedProperty _queriesHitTrigger2D;
         private bool _is2D;
-        [MenuItem("Window/UnityMissingWindows/Physics Window", false, 222)]
+        [MenuItem("Window/Unity Missing Windows/Physics Window", false, 222)]
         internal static void OpenWindow()
         {
             EditorWindow window = GetWindow(typeof(PhysicsWindow));

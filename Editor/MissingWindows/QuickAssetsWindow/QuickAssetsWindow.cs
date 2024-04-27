@@ -13,7 +13,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         private SerializedProperty _assets;
         private ReorderableList _list;
         private float _size = 50f;
-        [MenuItem("Window/UnityMissingWindows/QuickAssets Window", false, 222)]
+        [MenuItem("Window/Unity Missing Windows/QuickAssets Window", false, 222)]
         internal static void OpenWindow()
         {
             EditorWindow window = GetWindow(typeof(QuickAssetsWindow));
