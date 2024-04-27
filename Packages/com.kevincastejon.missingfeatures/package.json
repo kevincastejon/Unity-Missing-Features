@@ -1,20 +1,27 @@
 {
   "name": "com.kevincastejon.missingfeatures",
   "version": "1.0.0",
-  "displayName": "Unity's Missing Features",
-  "description": "A bunch of Unity's basic missing features.",
-  "documentationUrl": "https://example.com/",
-  "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
+  "displayName": "Missing Features",
+  "description": "A bunch of basic missing features.",
   "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "basic",
+    "missing",
+    "features"
   ],
   "samples": [
     {
       "displayName": "Missing Events Samples",
-      "description": "Demo scenes demonstrating this package",
+      "description": "Demo scenes demonstrating the missing events features",
+      "path": "Samples~/MissingEventsSamples"
+    },
+    {
+      "displayName": "Missing Attributes Samples",
+      "description": "Demo scenes demonstrating the missing attributes features",
+      "path": "Samples~/MissingEventsSamples"
+    },
+    {
+      "displayName": "Missing Events Samples",
+      "description": "Demo scenes demonstrating the missing components features",
       "path": "Samples~/MissingEventsSamples"
     }
   ],

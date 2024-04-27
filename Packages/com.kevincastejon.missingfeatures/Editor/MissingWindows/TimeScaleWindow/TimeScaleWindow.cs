@@ -30,7 +30,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         private SerializedProperty _timeScale;
         [SerializeField] private float _step;
 
-        [MenuItem("Window/UnityMissingWindows/TimeScale Window", false, 222)]
+        [MenuItem("Window/Unity Missing Windows/TimeScale Window", false, 222)]
         internal static void OpenWindow()
         {
             EditorWindow window = GetWindow(typeof(TimeScaleWindow));

@@ -2,18 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugLogger : MonoBehaviour
+namespace KevinCastejon.MissingFeatures.MissingComponents
 {
-    public void DebugLog(object message)
+    /// <summary>
+    /// A component with public methods that you can plug to UnityEvents callback to debug events firing
+    /// </summary>
+    public class DebugLogger : MonoBehaviour
     {
-        Debug.Log(message);
-    }
-    public void DebugLogWarning(object message)
-    {
-        Debug.LogWarning(message);
-    }
-    public void DebugLogError(object message)
-    {
-        Debug.LogError(message);
+        public void DebugLog(string message)
+        {
+            Debug.Log(message);
+        }
+        public void DebugLogWarning(string message)
+        {
+            Debug.LogWarning(message);
+        }
+        public void DebugLogError(string message)
+        {
+            Debug.LogError(message);
+        }
+        public void DebugLog(object message)
+        {
+            Debug.Log(message);
+        }
+        public void DebugLogWarning(object message)
+        {
+            Debug.LogWarning(message);
+        }
+        public void DebugLogError(object message)
+        {
+            Debug.LogError(message);
+        }
     }
 }
