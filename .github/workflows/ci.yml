@@ -30,10 +30,8 @@ jobs:
           git config --global user.email 'github-bot@users.noreply.github.com'
           git commit -am "fix: Documentation => Documentation~"
         fi
+        git checkout main -- LICENSE.md
+        git commit -am "Copy LICENSE.md to upm branch"
         git push -f -u origin upm
-        git checkout main
-        git checkout upm LICENSE.md
-        git commit -am "Copy README.md to upm branch"
-        git push origin upm
       env:
         PKG_ROOT: Packages/com.kevincastejon.missingfeatures
