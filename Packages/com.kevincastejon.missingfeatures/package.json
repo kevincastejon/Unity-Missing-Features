@@ -18,7 +18,7 @@
     {
       "displayName": "Missing Attributes Samples",
       "description": "Demo scenes demonstrating the missing attributes features",
-      "path": "Samples~/MissingEventsSamples"
+      "path": "Samples~/MissingAttributesSamples"
     },
     {
       "displayName": "Missing Components Samples",
