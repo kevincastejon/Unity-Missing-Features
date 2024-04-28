@@ -12,7 +12,8 @@
 
 ## How to install
 
-- From **Github**:												Use the **"Add package from git URL..."** button of the **PackageManager** window and type : *https://github.com/kevincastejon/Unity-Missing-Features.git#upm*
+- From **Github**:												
+Use the **"Add package from git URL..."** button of the **PackageManager** window and type : *https://github.com/kevincastejon/Unity-Missing-Features.git#upm*
 
 ## Content
 
