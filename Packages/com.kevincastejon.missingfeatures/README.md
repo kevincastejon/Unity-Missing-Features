@@ -99,6 +99,9 @@ Exposes the scenes assets.
 	- **Quick Assets Window**<BR/>
 Exposes an custom assets list.
 
+	- **Transform Randomizer Window**<BR/>
+Allows position, rotation and scale randomizing.
+
 ---
 - <u>**Missing Components**</u><BR/>
 
