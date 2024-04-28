@@ -2,6 +2,9 @@
 
 ## A bunch of basic missing features
 
+There are many basic features that are missing natively. This package provides many tools to fill these holes and improve productivity.
+It contains programming utilitary attributes that limits the need of making custom editors, or ready-to-use components and events that limits the need of scripting.
+
 [See online documentation](https://kevincastejon.github.io/Unity-Missing-Features/)
 
 [Get the Unity package](https://github.com/kevincastejon/Unity-Missing-Features/releases/latest)
