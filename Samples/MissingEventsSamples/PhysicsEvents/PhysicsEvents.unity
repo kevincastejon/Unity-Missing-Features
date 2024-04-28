@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 950061374}
   - component: {fileID: 950061378}
   - component: {fileID: 950061380}
-  - component: {fileID: 950061379}
+  - component: {fileID: 950061381}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -762,18 +762,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
---- !u!114 &950061379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950061373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa565a9dd0d4b44a9ec74dd62a850a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &950061380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,46 +812,49 @@ MonoBehaviour:
       _onEnter:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 950061379}
-            m_TargetAssemblyTypeName: TestPhysicsEvents, Assembly-CSharp
-            m_MethodName: OnEnter
-            m_Mode: 0
+          - m_Target: {fileID: 950061381}
+            m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+              com.kevincastejon.missingfeatures.runtime
+            m_MethodName: DebugLog
+            m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: 
+              m_StringArgument: ENTER COLLISION
               m_BoolArgument: 0
             m_CallState: 2
       _onStay:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 950061379}
-            m_TargetAssemblyTypeName: TestPhysicsEvents, Assembly-CSharp
-            m_MethodName: OnStay
-            m_Mode: 0
+          - m_Target: {fileID: 950061381}
+            m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+              com.kevincastejon.missingfeatures.runtime
+            m_MethodName: DebugLog
+            m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: 
+              m_StringArgument: STAY COLLISION
               m_BoolArgument: 0
             m_CallState: 2
       _onExit:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 950061379}
-            m_TargetAssemblyTypeName: TestPhysicsEvents, Assembly-CSharp
-            m_MethodName: OnExit
-            m_Mode: 0
+          - m_Target: {fileID: 950061381}
+            m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+              com.kevincastejon.missingfeatures.runtime
+            m_MethodName: DebugLog
+            m_Mode: 5
             m_Arguments:
               m_ObjectArgument: {fileID: 0}
               m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
               m_IntArgument: 0
               m_FloatArgument: 0
-              m_StringArgument: 
+              m_StringArgument: EXIT COLLISION
               m_BoolArgument: 0
             m_CallState: 2
   _watchSleepingState: 1
@@ -871,35 +862,47 @@ MonoBehaviour:
     _onWoke:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 950061379}
-          m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingEventsSamples.TestPhysicsEvents,
+        - m_Target: {fileID: 950061381}
+          m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
             com.kevincastejon.missingfeatures.runtime
-          m_MethodName: OnAwake
-          m_Mode: 1
+          m_MethodName: DebugLog
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: AWAKE
             m_BoolArgument: 0
           m_CallState: 2
     _onAsleep:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 950061379}
-          m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingEventsSamples.TestPhysicsEvents,
+        - m_Target: {fileID: 950061381}
+          m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
             com.kevincastejon.missingfeatures.runtime
-          m_MethodName: OnSleep
-          m_Mode: 1
+          m_MethodName: DebugLog
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: ASLEEP
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &950061381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950061373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab47979e833e6eb40bfafa882698759b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185237342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fe0f15ab18fe32f4982c79f7c58bd99c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

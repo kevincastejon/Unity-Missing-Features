@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 412931654}
   - component: {fileID: 412931653}
   - component: {fileID: 412931652}
-  - component: {fileID: 412931651}
+  - component: {fileID: 412931656}
   m_Layer: 0
   m_Name: MouseEvents
   m_TagString: Untagged
@@ -159,18 +159,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &412931651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412931648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb7be6c1be93aa43b29f21bae1580ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &412931652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,106 +174,113 @@ MonoBehaviour:
   _onMouseEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseEnter
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ENTER
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseOver:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseOver
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: OVER
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseDown
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DOWN
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseDrag:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseDrag
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DRAG
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseUp
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: UP
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseUpAsButton:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseUpAsButton
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: UP AS BUTTON
           m_BoolArgument: 0
         m_CallState: 2
   _onMouseExit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 412931651}
-        m_TargetAssemblyTypeName: TestMouseEvents, Assembly-CSharp
-        m_MethodName: MouseExit
-        m_Mode: 1
+      - m_Target: {fileID: 412931656}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: EXIT
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!135 &412931653
@@ -359,6 +354,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412931648}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &412931656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412931648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab47979e833e6eb40bfafa882698759b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &735910860
 GameObject:
   m_ObjectHideFlags: 0

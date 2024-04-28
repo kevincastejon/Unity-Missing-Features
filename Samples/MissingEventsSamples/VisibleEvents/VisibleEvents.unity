@@ -227,9 +227,9 @@ GameObject:
   - component: {fileID: 1681844505}
   - component: {fileID: 1681844504}
   - component: {fileID: 1681844503}
-  - component: {fileID: 1681844502}
-  - component: {fileID: 1681844501}
   - component: {fileID: 1681844507}
+  - component: {fileID: 1681844502}
+  - component: {fileID: 1681844508}
   m_Layer: 0
   m_Name: TestVisibleEvents
   m_TagString: Untagged
@@ -237,18 +237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1681844501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681844500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22c066b84a70d34a888b313e28fb248, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1681844502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,31 +252,33 @@ MonoBehaviour:
   _onBecameVisible:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681844501}
-        m_TargetAssemblyTypeName: TestVisibleEvents, Assembly-CSharp
-        m_MethodName: OnVisible
-        m_Mode: 1
+      - m_Target: {fileID: 1681844508}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: VISIBLE
           m_BoolArgument: 0
         m_CallState: 2
   _onBecameInvisible:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681844501}
-        m_TargetAssemblyTypeName: TestVisibleEvents, Assembly-CSharp
-        m_MethodName: OnInvisible
-        m_Mode: 1
+      - m_Target: {fileID: 1681844508}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.DebugLogger,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: DebugLog
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: INVISIBLE
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1681844503
@@ -404,6 +394,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1681844508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681844500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab47979e833e6eb40bfafa882698759b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886575936
 GameObject:
   m_ObjectHideFlags: 0
