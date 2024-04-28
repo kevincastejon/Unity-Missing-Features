@@ -21,9 +21,9 @@
       "path": "Samples~/MissingEventsSamples"
     },
     {
-      "displayName": "Missing Events Samples",
+      "displayName": "Missing Components Samples",
       "description": "Demo scenes demonstrating the missing components features",
-      "path": "Samples~/MissingEventsSamples"
+      "path": "Samples~/MissingComponentsSamples"
     }
   ],
   "author": {
