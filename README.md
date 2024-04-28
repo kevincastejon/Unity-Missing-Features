@@ -2,11 +2,13 @@
 
 ## A bunch of basic missing features
 
-[See online documentation](https://kevincastejon.github.io/Unity-MissingFeatures/)
+[See online documentation](https://kevincastejon.github.io/Unity-Missing-Features/)
 
-[Get the Unity package](https://github.com/kevincastejon/Unity-MissingFeatures/releases/latest)
+[Get the Unity package](https://github.com/kevincastejon/Unity-Missing-Features/releases/latest)
 
 [See my other Unity packages](https://assetstore.unity.com/publishers/46935)
+
+**[Complete API Documentation](https://kevincastejon.fr/Documentations/Unity-Missing-Features/)**
 
 
 ## Content
