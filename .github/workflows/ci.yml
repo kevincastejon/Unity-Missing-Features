@@ -32,7 +32,6 @@ jobs:
         fi
         git push -f -u origin upm
         git checkout main
-        git ls-files
         git checkout upm LICENSE.md
         git commit -am "Copy README.md to upm branch"
         git push origin upm
