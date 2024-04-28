@@ -1,0 +1,16 @@
+{
+    "name": "com.kevincastejon.missingfeatures.samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e36a69c5caf8cc447a5bba593e60b9a0"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
