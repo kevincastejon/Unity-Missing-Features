@@ -25,6 +25,18 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
         {
             Debug.Log(message);
         }
+        public void DebugLog(float message)
+        {
+            Debug.Log(message);
+        }
+        public void DebugLog(int message)
+        {
+            Debug.Log(message);
+        }
+        public void DebugLog(bool message)
+        {
+            Debug.Log(message);
+        }
         public void DebugLogWarning(object message)
         {
             Debug.LogWarning(message);
