@@ -2,7 +2,17 @@
 
 ## A bunch of basic missing features
 
-- ### <u>Missing Attributes</u><BR/>
+[See online documentation](https://kevincastejon.github.io/Unity-MissingFeatures/)
+
+[Get the Unity package](https://github.com/kevincastejon/Unity-MissingFeatures/releases/latest)
+
+[See my other Unity packages](https://assetstore.unity.com/publishers/46935)
+
+
+## Content
+
+---
+- <u>**Missing Attributes**</u><BR/>
 
 	- **LabelPlus**<BR/>
 Custom *Inspector* property label that allows using an icon, a custom label text and a custom label color.
@@ -41,7 +51,8 @@ It offers a single layer selection instead of the multiple LayerMask selection.
 	- **Scene**<BR/>
 Displays a dropdown list of available build settings Scenes (must be used with a 'string' typed property).
 
-- ### <u>Missing Events</u><BR/>
+---
+- <u>**Missing Events**</u><BR/>
 
 	- **MouseEvents**<BR/>
 Offers UnityEvent fields for Unity's mouse callback methods.
@@ -64,7 +75,8 @@ Middleware components to plug between UnityEvent and methods when the type does 
 		- **FloatToIntEvent** : A component to plug between a UnityEvent\<float\> and a method that accepts an integer parameter.
 		- **ToStringEvent** : A component to plug between a UnityEvent and a method that accepts a string parameter. Supported types are bool, int and float.
 
-- ### <u>Missing Windows</u><BR/>
+---
+- <u>**Missing Windows**</u><BR/>
 
 	- **TimeScale Window**<BR/>
 Exposes the main timescale settings.
@@ -78,7 +90,8 @@ Exposes the scenes assets.
 	- **Quick Assets Window**<BR/>
 Exposes an custom assets list.
 
-- ### <u>Missing Components</u><BR/>
+---
+- <u>**Missing Components**</u><BR/>
 
 	- **Destroyer**<BR/>
 A component that can destroy objects.

@@ -8,6 +8,7 @@
     "missing",
     "features"
   ],
+  "documentationUrl": "https://kevincastejon.fr/Documentations/Unity-MissingFeatures/",
   "samples": [
     {
       "displayName": "Missing Events Samples",
