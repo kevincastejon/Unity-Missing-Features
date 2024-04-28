@@ -32,6 +32,10 @@ jobs:
         fi
         git checkout main -- LICENSE.md
         git commit -am "Copy LICENSE.md to upm branch"
+        git checkout main -- README.md
+        git commit -am "Copy README.md to upm branch"
+        git checkout main -- CHANGELOG.md
+        git commit -am "Copy CHANGELOG.md to upm branch"
         git push -f -u origin upm
       env:
         PKG_ROOT: Packages/com.kevincastejon.missingfeatures
