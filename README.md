@@ -3,7 +3,7 @@
 ## A bunch of basic missing features
 
 There are many basic features that are missing natively. This package provides many tools to fill these holes and improve productivity.
-It contains programming utilitary attributes that limits the need of making custom editors, or ready-to-use components and events that limits the need of scripting.
+It contains programming utilitary attributes that limits the need of making custom editors, or ready-to-use components and events that limits the need of scripting, pushing further the "visual scripting" approach.
 
 [See online documentation](https://kevincastejon.github.io/Unity-Missing-Features/)
 
@@ -21,6 +21,51 @@ Use the **"Add package from git URL..."** button of the **PackageManager** windo
 ## Content
 
 ---
+
+- <u>**Missing Events**</u><BR/>
+
+	- **MouseEvents**<BR/>
+Offers UnityEvent fields for Unity's mouse callback methods.
+
+	- **LifeCycleEvents**<BR/>
+Offers UnityEvent fields for Unity's lifecycle callback methods.
+
+	- **VisibleEvents**<BR/>
+Offers UnityEvent fields for Unity's visible callback methods.
+
+	- **PhysicsEvents**<BR/>
+Offers UnityEvent fields for Unity's physics callback methods and sleep state changes.
+
+	- **TimerEvents**<BR/>
+Fires UnityEvents based on time.
+
+	- **Events Data Converters**<BR/>
+Middleware components to plug between UnityEvent and methods when the type does not match but can be converted.
+		- **BooleanReverseEvent** : A component to plug between a UnityEvent\<bool\> and a method that accepts an boolean parameter to reverse its value.
+		- **FloatToIntEvent** : A component to plug between a UnityEvent\<float\> and a method that accepts an integer parameter.
+		- **ToStringEvent** : A component to plug between a UnityEvent and a method that accepts a string parameter. Supported types are bool, int and float.
+
+---
+
+- <u>**Missing Windows**</u><BR/>
+
+	- **TimeScale Window**<BR/>
+Exposes the main timescale settings.
+
+	- **PhysicsWindow**<BR/>
+Exposes the main physics settings.
+
+	- **Scenes Explorer Window**<BR/>
+Exposes the scenes assets.
+
+	- **Quick Assets Window**<BR/>
+Exposes an custom assets list.
+
+	- **Transform Randomizer Window**<BR/>
+Allows position, rotation and scale randomizing.
+
+---
+
 - <u>**Missing Attributes**</u><BR/>
 
 	- **LabelPlus**<BR/>
@@ -61,48 +106,7 @@ It offers a single layer selection instead of the multiple LayerMask selection.
 Displays a dropdown list of available build settings Scenes (must be used with a 'string' typed property).
 
 ---
-- <u>**Missing Events**</u><BR/>
 
-	- **MouseEvents**<BR/>
-Offers UnityEvent fields for Unity's mouse callback methods.
-
-	- **LifeCycleEvents**<BR/>
-Offers UnityEvent fields for Unity's lifecycle callback methods.
-
-	- **VisibleEvents**<BR/>
-Offers UnityEvent fields for Unity's visible callback methods.
-
-	- **PhysicsEvents**<BR/>
-Offers UnityEvent fields for Unity's physics callback methods and sleep state changes.
-
-	- **TimerEvents**<BR/>
-Fires UnityEvents based on time.
-
-	- **Events Data Converters**<BR/>
-Middleware components to plug between UnityEvent and methods when the type does not match but can be converted.
-		- **BooleanReverseEvent** : A component to plug between a UnityEvent\<bool\> and a method that accepts an boolean parameter to reverse its value.
-		- **FloatToIntEvent** : A component to plug between a UnityEvent\<float\> and a method that accepts an integer parameter.
-		- **ToStringEvent** : A component to plug between a UnityEvent and a method that accepts a string parameter. Supported types are bool, int and float.
-
----
-- <u>**Missing Windows**</u><BR/>
-
-	- **TimeScale Window**<BR/>
-Exposes the main timescale settings.
-
-	- **PhysicsWindow**<BR/>
-Exposes the main physics settings.
-
-	- **Scenes Explorer Window**<BR/>
-Exposes the scenes assets.
-
-	- **Quick Assets Window**<BR/>
-Exposes an custom assets list.
-
-	- **Transform Randomizer Window**<BR/>
-Allows position, rotation and scale randomizing.
-
----
 - <u>**Missing Components**</u><BR/>
 
 	- **Destroyer**<BR/>
