@@ -12,7 +12,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
             EditorGUI.BeginDisabledGroup(true);
 
             // On dessine la propriété
-            EditorGUI.PropertyField(position, property, label);
+            EditorGUI.PropertyField(position, property, label, true);
 
             // On réactive l'UI
             EditorGUI.EndDisabledGroup();

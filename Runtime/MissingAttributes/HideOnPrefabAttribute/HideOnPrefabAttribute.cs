@@ -7,15 +7,15 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
     /// </summary>
     public class HideOnPrefabAttribute : PropertyAttribute
     {
-        public readonly bool invert;
+        public readonly bool isTrue;
 
         /// <summary>
         /// Hide the property in PrefabMode. The behaviour can be inverted with the 'invert' parameter so the property is visible only in PrefabMode.
         /// </summary>
-        /// <param name="invert">If set to true, it inverts the behaviour and makes the property visible only in PrefabMode.</param>
-        public HideOnPrefabAttribute(bool invert = false)
+        /// <param name="isTrue">If set to true, it inverts the behaviour and makes the property visible only in PrefabMode.</param>
+        public HideOnPrefabAttribute(bool isTrue = false)
         {
-            this.invert = invert;
+            this.isTrue = isTrue;
         }
     }
 }

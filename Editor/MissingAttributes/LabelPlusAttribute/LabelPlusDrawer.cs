@@ -25,7 +25,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
                 previousColor = EditorStyles.label.normal.textColor;
                 EditorStyles.label.normal.textColor = labelPlus.color;
             }
-            EditorGUI.PropertyField(position, property, labelPlus.textIsNull ? label : new GUIContent(labelPlus.text));
+            EditorGUI.PropertyField(position, property, labelPlus.textIsNull ? label : new GUIContent(labelPlus.text), true);
             if (!labelPlus.colorIsNull)
             {
                 EditorStyles.label.normal.textColor = previousColor;
