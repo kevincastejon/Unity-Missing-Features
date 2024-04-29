@@ -15,7 +15,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
                 EditorGUI.BeginDisabledGroup(true);
             }
 
-            EditorGUI.PropertyField(position, property, label);
+            EditorGUI.PropertyField(position, property, label, true);
 
             if (rdOnly)
             {
