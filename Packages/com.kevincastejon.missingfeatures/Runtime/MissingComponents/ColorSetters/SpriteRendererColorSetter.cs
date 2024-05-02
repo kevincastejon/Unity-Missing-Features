@@ -33,7 +33,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.ColorSetters
         public void SetColor(int colorIndex)
         {
             if (_colors == null || _colors.Length == 0) { return; }
-            _target.material.color = _colors[colorIndex % _colors.Length];
+            _target.color = _colors[colorIndex % _colors.Length];
         }
         public void Reset()
         {
