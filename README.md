@@ -109,6 +109,9 @@ Displays a dropdown list of available build settings Scenes (must be used with a
 
 - <u>**Missing Components**</u><BR/>
 
+	- **Instantiator**<BR/>
+A component that can instantiate objects.
+
 	- **Destroyer**<BR/>
 A component that can destroy objects.
 
