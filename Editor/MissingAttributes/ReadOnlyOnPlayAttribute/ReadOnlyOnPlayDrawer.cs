@@ -6,6 +6,10 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
     [CustomPropertyDrawer(typeof(ReadOnlyOnPlayAttribute))]
     public class ReadOnlyOnPlayDrawer : PropertyDrawer
     {
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            return EditorGUI.GetPropertyHeight(property, label);
+        }
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             ReadOnlyOnPlayAttribute att = (ReadOnlyOnPlayAttribute)attribute;
