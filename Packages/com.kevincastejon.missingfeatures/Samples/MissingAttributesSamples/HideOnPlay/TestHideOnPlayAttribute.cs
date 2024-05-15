@@ -9,7 +9,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributesSamples
     public class TestHideOnPlayAttribute : MonoBehaviour
     {
         [HideOnPlay]
-        [SerializeField] private UnityEvent<int> _healthPoints;
+        [SerializeField] private int _healthPoints;
 
         [HideOnPlay(true)]
         [SerializeField] private int _damages;
