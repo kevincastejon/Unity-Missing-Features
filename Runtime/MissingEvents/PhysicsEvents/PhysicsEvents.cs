@@ -124,14 +124,11 @@ namespace KevinCastejon.MissingFeatures.MissingEvents
         {
             _body = GetComponent<Rigidbody>();
             _body2D = GetComponent<Rigidbody2D>();
-            if (!_watchSleepingState || (_body == null && _body2D == null))
-            {
-                enabled = false;
-            }
         }
 
         private void FixedUpdate()
         {
+            if (!_watchSleepingState) { return; }
             bool isSleeping = false;
             if (_body)
             {
