@@ -21,10 +21,6 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
         {
             Debug.LogError(message);
         }
-        public void DebugLog(object message)
-        {
-            Debug.Log(message);
-        }
         public void DebugLog(float message)
         {
             Debug.Log(message);
@@ -37,11 +33,27 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
         {
             Debug.Log(message);
         }
-        public void DebugLogWarning(object message)
+        public void DebugLogWarning(float message)
         {
             Debug.LogWarning(message);
         }
-        public void DebugLogError(object message)
+        public void DebugLogWarning(int message)
+        {
+            Debug.LogWarning(message);
+        }
+        public void DebugLogWarning(bool message)
+        {
+            Debug.LogWarning(message);
+        }
+        public void DebugLogError(float message)
+        {
+            Debug.LogError(message);
+        }
+        public void DebugLogError(int message)
+        {
+            Debug.LogError(message);
+        }
+        public void DebugLogError(bool message)
         {
             Debug.LogError(message);
         }
