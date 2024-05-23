@@ -129,3 +129,6 @@ A component with public methods that you can plug to UnityEvents callback to deb
 
 	- **Color Setters**<BR/>
 Simple color setter components meant to be plugged to UnityEvent for setting color without scripting. Works with Renderer and SpriteRenderer.
+
+	- **Transform Teleporter**<BR/>
+Simple Transform teleporter component meant to be plugged to UnityEvent for setting position, rotation and/or scale.
