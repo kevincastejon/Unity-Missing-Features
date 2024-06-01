@@ -13,9 +13,9 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [Tooltip("The Transform to animate. If omitted then the component's gameobject's Transform will be used.")]
         [SerializeField] private Transform _target;
         [Tooltip("The beginning state of the animation.")]
-        [SerializeField] private Transform _from;
+        [SerializeField] private TransformData _from;
         [Tooltip("The end state of the animation.")]
-        [SerializeField] private Transform _to;
+        [SerializeField] private TransformData _to;
 
         [SerializeField] private Timer _timing;
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
@@ -34,11 +34,11 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         /// <summary>
         /// The beginning state of the animation.
         /// </summary>
-        public Transform From { get => _from; set => _from = value; }
+        public TransformData From { get => _from; set => _from = value; }
         /// <summary>
         /// The end state of the animation.
         /// </summary>
-        public Transform To { get => _to; set => _to = value; }
+        public TransformData To { get => _to; set => _to = value; }
         /// <summary>
         /// The timer used for the animation
         /// </summary>
@@ -90,16 +90,16 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
                 {
                     t = 1f - t;
                 }
-                _target.position = Vector3.Lerp(_from.position, _to.position, t);
+                _target.position = Vector3.Lerp(_from.Position, _to.Position, t);
                 if (_useEulerAngles)
                 {
-                    _target.eulerAngles = Vector3.Lerp(_from.eulerAngles, _to.eulerAngles, t);
+                    _target.eulerAngles = Vector3.Lerp(_from.Rotation.eulerAngles, _to.Rotation.eulerAngles, t);
                 }
                 else
                 {
-                    _target.rotation = Quaternion.Lerp(_from.rotation, _to.rotation, t);
+                    _target.rotation = Quaternion.Lerp(_from.Rotation, _to.Rotation, t);
                 }
-                _target.localScale = Vector3.Lerp(_from.localScale, _to.localScale, t);
+                _target.localScale = Vector3.Lerp(_from.Scale, _to.Scale, t);
             }
         }
         /// <summary>

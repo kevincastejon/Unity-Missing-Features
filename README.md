@@ -2,18 +2,34 @@
 
 ## A bunch of basic missing features
 
-There are many basic features that are missing natively. This package provides many tools to fill these holes and improve productivity.
-It contains programming utilitary attributes that limits the need of making custom editors, or ready-to-use components and events that limits the need of scripting, pushing further the "visual scripting" approach.
+**A bunch of basic missing features.**
 
-[See online documentation](https://kevincastejon.github.io/Unity-Missing-Features/)
+There are many basic features that are missing natively.
+This package provides many tools to fill these holes and improve productivity.
+It contains programming utilitary attributes that limits the need of making custom editors, or custom windows and ready-to-use components and events that limits the need of scripting, pushing further the "visual scripting" approach.
 
-[Get the Unity package](https://github.com/kevincastejon/Unity-Missing-Features/releases/latest)
+## Asset Store
 
-[See my other Unity packages](https://assetstore.unity.com/publishers/46935)
+[Official package page](https://assetstore.unity.com/packages/tools/utilities/missing-features-283473)
 
-**[Complete API Documentation](https://kevincastejon.fr/Documentations/Unity-Missing-Features/)**
+[All my free packages](https://assetstore.unity.com/publishers/46935)
+
+## GitHub
+
+[The source code repository](https://github.com/kevincastejon/Unity-Missing-Features)
+
+[The online documentation](https://kevincastejon.github.io/Unity-Missing-Features/)
+
+[Get the UnityPackage file](https://github.com/kevincastejon/Unity-Missing-Features/releases/latest)
+
+## References
+
+[Complete references](https://kevincastejon.fr/Documentations/Unity-Missing-Features/)
 
 ## How to install
+
+- From **Unity Asset Store**:												
+Browse to *https://assetstore.unity.com/packages/tools/utilities/missing-features-283473* and add the asset to your account. You can then use the "Open in Unity" button in your browser or find the package on the **Package Manager** window.
 
 - From **Github**:												
 Use the **"Add package from git URL..."** button of the **PackageManager** window and type : *https://github.com/kevincastejon/Unity-Missing-Features.git#upm*

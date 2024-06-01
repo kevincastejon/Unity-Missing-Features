@@ -278,8 +278,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 106048989}
-  _from: {fileID: 1357399381}
-  _to: {fileID: 756487884}
+  _from:
+    _reference: {fileID: 1357399381}
+    _position: {x: 4.13, y: -2.65, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
+  _to:
+    _reference: {fileID: 756487884}
+    _position: {x: 7.13, y: -2.65, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
   _timing:
     _duration: 1
     _count: 0
@@ -611,8 +619,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 517294537}
-  _from: {fileID: 278339000}
-  _to: {fileID: 1678633632}
+  _from:
+    _reference: {fileID: 278339000}
+    _position: {x: 5.77, y: 2.55, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
+  _to:
+    _reference: {fileID: 1678633632}
+    _position: {x: 5.77, y: 2.55, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1.5, y: 1.5, z: 1.5}
   _timing:
     _duration: 0.5
     _count: 0
@@ -933,8 +949,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1313553325}
-  _from: {fileID: 701030663}
-  _to: {fileID: 1940638454}
+  _from:
+    _reference: {fileID: 701030663}
+    _position: {x: 5.77, y: -0.04000008, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
+  _to:
+    _reference: {fileID: 1940638454}
+    _position: {x: 5.77, y: -0.04000008, z: 0}
+    _rotation: {x: 0, y: 0, z: 0.008726875, w: -0.9999619}
+    _scale: {x: 1, y: 1, z: 1}
   _timing:
     _duration: 1
     _count: 0
@@ -1269,8 +1293,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1854659091}
-  _from: {fileID: 1920136493}
-  _to: {fileID: 1433512093}
+  _from:
+    _reference: {fileID: 1920136493}
+    _position: {x: 0, y: 0, z: 0}
+    _rotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
+    _scale: {x: 1, y: 1, z: 1}
+  _to:
+    _reference: {fileID: 1433512093}
+    _position: {x: -0.94, y: 0.45, z: -8.33}
+    _rotation: {x: 0.024522379, y: -0.90693325, z: 0.29490736, w: -0.29983392}
+    _scale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   _timing:
     _duration: 2
     _count: 0

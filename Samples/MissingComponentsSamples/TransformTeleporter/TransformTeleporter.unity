@@ -660,7 +660,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1550664800}
-  _to: {fileID: 478629238}
+  _to:
+    _reference: {fileID: 478629238}
+    _position: {x: 3.33, y: 1.76, z: 8.19}
+    _rotation: {x: 340.58414, y: 24.458458, z: 306.16074}
+    _scale: {x: 1.383, y: 5.538777, z: 1.383}
   _usePosition: 1
   _useRotation: 1
   _useScale: 1
