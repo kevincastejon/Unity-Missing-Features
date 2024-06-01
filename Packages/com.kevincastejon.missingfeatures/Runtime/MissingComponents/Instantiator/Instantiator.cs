@@ -1,4 +1,5 @@
 using KevinCastejon.MissingFeatures.MissingAttributes;
+using KevinCastejon.MissingFeatures.SharedUtils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,19 +10,22 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
     /// </summary>
     public class Instantiator : MonoBehaviour
     {
-        [Tooltip("Will instantiate the gameobject into this parent. Null means at the scene root.")]
-        [SerializeField] private Transform _parent;
-        [Tooltip("Will instantiate the gameobject at this local position")]
-        [SerializeField] private Vector3 _position;
-        [Tooltip("Will instantiate the gameobject with this rotation")]
-        [SerializeField] private Vector3 _rotation;
+        [Tooltip("Optional settings for the instance")]
+        [SerializeField] private TransformData _destination;
 
         /// <summary>
         /// Instantiates the target gameobject or prefab
         /// </summary>
-        public void InstantiateObject(Object gameObject)
+        public void InstantiateObject(GameObject gameObject)
         {
-            Instantiate(gameObject, _position, Quaternion.Euler(_rotation.x, _rotation.y, _rotation.z), _parent);
+            GameObject go = Instantiate(gameObject);
+            if (_destination.Parent)
+            {
+                go.transform.SetParent(_destination.Parent);
+            }
+            go.transform.localPosition = _destination.Position;
+            go.transform.localRotation = _destination.Rotation;
+            go.transform.localScale = _destination.Scale;
         }
     }
 }
