@@ -243,12 +243,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a66a0f4797da2542a7cf26b8d0336c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useDestinationSetting: 1
   _destination:
-    _reference: {fileID: 0}
-    _parent: {fileID: 0}
     _position: {x: 0, y: 0, z: 0}
     _rotation: {x: 0, y: 0, z: 0, w: 1}
     _scale: {x: 1, y: 1, z: 1}
+  _useLocalScope: 0
+  _useParentSetting: 0
+  _parent: {fileID: 0}
 --- !u!114 &65895343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,12 +736,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a66a0f4797da2542a7cf26b8d0336c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _useDestinationSetting: 1
   _destination:
-    _reference: {fileID: 0}
-    _parent: {fileID: 0}
     _position: {x: 0, y: 0, z: 0}
     _rotation: {x: 0, y: 0, z: 0, w: 1}
     _scale: {x: 1, y: 1, z: 1}
+  _useLocalScope: 0
+  _useParentSetting: 0
+  _parent: {fileID: 0}
 --- !u!114 &1651621815
 MonoBehaviour:
   m_ObjectHideFlags: 0

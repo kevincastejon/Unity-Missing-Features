@@ -13,10 +13,11 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [Tooltip("The Transform to animate. If omitted then the component's gameobject's Transform will be used.")]
         [SerializeField] private Transform _target;
         [Tooltip("The beginning state of the animation.")]
-        [SerializeField] private TransformData _from;
+        [SerializeField] private TransformData _origin;
         [Tooltip("The end state of the animation.")]
-        [SerializeField] private TransformData _to;
-
+        [SerializeField] private TransformData _destination;
+        [Tooltip("Will use global scope for position and rotation.")]
+        [SerializeField] private bool _useWorldCoordinates;
         [SerializeField] private Timer _timing;
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
         [SerializeField] private bool _yoyo = true;
@@ -34,11 +35,15 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         /// <summary>
         /// The beginning state of the animation.
         /// </summary>
-        public TransformData From { get => _from; set => _from = value; }
+        public TransformData Origin { get => _origin; set => _origin = value; }
         /// <summary>
         /// The end state of the animation.
         /// </summary>
-        public TransformData To { get => _to; set => _to = value; }
+        public TransformData Destination { get => _destination; set => _destination = value; }
+        /// <summary>
+        /// Will use global scope for position and rotation.
+        /// </summary>
+        public bool UseWorldCoordinates { get => _useWorldCoordinates; set => _useWorldCoordinates = value; }
         /// <summary>
         /// The timer used for the animation
         /// </summary>
@@ -90,16 +95,37 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
                 {
                     t = 1f - t;
                 }
-                _target.position = Vector3.Lerp(_from.Position, _to.Position, t);
-                if (_useEulerAngles)
+                if (_useWorldCoordinates)
                 {
-                    _target.eulerAngles = Vector3.Lerp(_from.Rotation.eulerAngles, _to.Rotation.eulerAngles, t);
+                    _target.position = Vector3.Lerp(_origin.Position, _destination.Position, t);
                 }
                 else
                 {
-                    _target.rotation = Quaternion.Lerp(_from.Rotation, _to.Rotation, t);
+                    _target.localPosition = Vector3.Lerp(_origin.Position, _destination.Position, t);
                 }
-                _target.localScale = Vector3.Lerp(_from.Scale, _to.Scale, t);
+                if (_useEulerAngles)
+                {
+                    if (_useWorldCoordinates)
+                    {
+                        _target.eulerAngles = Vector3.Lerp(_origin.Rotation.eulerAngles, _destination.Rotation.eulerAngles, t);
+                    }
+                    else
+                    {
+                        _target.localEulerAngles = Vector3.Lerp(_origin.Rotation.eulerAngles, _destination.Rotation.eulerAngles, t);
+                    }
+                }
+                else
+                {
+                    if (_useWorldCoordinates)
+                    {
+                        _target.rotation = Quaternion.Lerp(_origin.Rotation, _destination.Rotation, t);
+                    }
+                    else
+                    {
+                        _target.localRotation = Quaternion.Lerp(_origin.Rotation, _destination.Rotation, t);
+                    }
+                }
+                _target.localScale = Vector3.Lerp(_origin.Scale, _destination.Scale, t);
             }
         }
         /// <summary>
@@ -115,6 +141,38 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         public void Stop()
         {
             _timing.Stop();
+        }
+        /// <summary>
+        /// Set the destination values to the local position rotation and scale of the specified Transform component.
+        /// </summary>
+        /// <param name="transform">The Transform component used to feed the data from.</param>
+        public void SetDestinationLocalFromTransform(Transform transform)
+        {
+            _destination.SetTransformDataLocalFromTransform(transform);
+        }
+        /// <summary>
+        /// Set the destination values to the global position rotation and scale of the specified Transform component.
+        /// </summary>
+        /// <param name="transform">The Transform component used to feed the data from.</param>
+        public void SetDestinationGlobalFromTransform(Transform transform)
+        {
+            _destination.SetTransformDataGlobalFromTransform(transform);
+        }
+        /// <summary>
+        /// Set the origin values to the local position rotation and scale of the specified Transform component.
+        /// </summary>
+        /// <param name="transform">The Transform component used to feed the data from.</param>
+        public void SetOriginLocalFromTransform(Transform transform)
+        {
+            _origin.SetTransformDataLocalFromTransform(transform);
+        }
+        /// <summary>
+        /// Set the origin values to the global position rotation and scale of the specified Transform component.
+        /// </summary>
+        /// <param name="transform">The Transform component used to feed the data from.</param>
+        public void SetOriginGlobalFromTransform(Transform transform)
+        {
+            _origin.SetTransformDataGlobalFromTransform(transform);
         }
     }
 }

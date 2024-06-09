@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 478629238}
   m_Layer: 0
-  m_Name: To
+  m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 488580195}
   - component: {fileID: 488580194}
   - component: {fileID: 488580193}
+  - component: {fileID: 488580196}
   m_Layer: 5
   m_Name: TeleportButton
   m_TagString: Untagged
@@ -463,9 +464,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1235268535}
-        m_TargetAssemblyTypeName: TransformTeleporter, com.kevincastejon.missingfeatures.runtime
-        m_MethodName: Teleport
+      - m_Target: {fileID: 488580196}
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.TransformTeleporter,
+          com.kevincastejon.missingfeatures.runtime
+        m_MethodName: TeleportGlobal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -513,6 +515,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488580191}
   m_CullTransparentMesh: 1
+--- !u!114 &488580196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488580191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed889e0559d404f439d61d171f606748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 1550664800}
+  _destination:
+    _position: {x: 3.33, y: 1.76, z: 8.19}
+    _rotation: {x: -0.24146982, y: 0.111554794, z: -0.40428203, w: 0.8751023}
+    _scale: {x: 1.383, y: 5.538777, z: 1.383}
+  _usePosition: 1
+  _useRotation: 1
+  _useScale: 1
 --- !u!1 &732773234
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,59 +637,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1235268533
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1235268534}
-  - component: {fileID: 1235268535}
-  m_Layer: 0
-  m_Name: TransformTeleporterTest
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1235268534
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235268533}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1235268535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235268533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed889e0559d404f439d61d171f606748, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _target: {fileID: 1550664800}
-  _to:
-    _reference: {fileID: 478629238}
-    _position: {x: 3.33, y: 1.76, z: 8.19}
-    _rotation: {x: 340.58414, y: 24.458458, z: 306.16074}
-    _scale: {x: 1.383, y: 5.538777, z: 1.383}
-  _usePosition: 1
-  _useRotation: 1
-  _useScale: 1
 --- !u!1 &1257755779
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +910,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 212079325}
   - {fileID: 1257755781}
-  - {fileID: 1235268534}
   - {fileID: 1550664800}
   - {fileID: 478629238}
   - {fileID: 732773238}
