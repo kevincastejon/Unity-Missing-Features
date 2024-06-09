@@ -21,11 +21,20 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         }
         private void OnEnable()
         {
-            QuickAssetsSO so = ProjectSettingsUtility.LoadMyData();
-            //string[] paths = AssetDatabase.FindAssets("t:QuickAssetsSo").Select(x => AssetDatabase.GUIDToAssetPath(x)).ToArray();
-            _so = new SerializedObject(so);
-            _assets = _so.FindProperty("_quickAssets");
-            InitList();
+            string[] paths = AssetDatabase.FindAssets("t:QuickAssetsSo").Select(x => AssetDatabase.GUIDToAssetPath(x)).ToArray();
+            if (paths.Length == 0)
+            {
+                AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<QuickAssetsSO>(), "Assets/QuickAssetsList.asset");
+                _so = new SerializedObject(AssetDatabase.LoadAssetAtPath<Object>("Assets/QuickAssetsList.asset"));
+                _assets = _so.FindProperty("_quickAssets");
+                InitList();
+            }
+            else
+            {
+                _so = new SerializedObject(AssetDatabase.LoadAssetAtPath<Object>(paths[0]));
+                _assets = _so.FindProperty("_quickAssets");
+                InitList();
+            }
         }
 
         private void InitList()
@@ -52,11 +61,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
             }
             EditorGUI.BeginChangeCheck();
             _list.DoLayoutList();
-            if (EditorGUI.EndChangeCheck())
-            {
-                _so.ApplyModifiedProperties();
-                ProjectSettingsUtility.SaveMyData((QuickAssetsSO)_so.targetObject);
-            }
+            _so.ApplyModifiedProperties();
         }
         private void DrawElementCallback(Rect rect, int index, bool isActive, bool isFocused)
         {
