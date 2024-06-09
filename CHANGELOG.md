@@ -1,3 +1,7 @@
+## [1.0.3] - 2024-06-09
+
+- fixed QuickAssetWindow by relocating the scriptaleobject asset into ProjectSettings folder instead of immutable Packages folder
+
 ## [1.0.2] - 2024-06-09
 
 - added a Clear method to SimpleAnimators classes
