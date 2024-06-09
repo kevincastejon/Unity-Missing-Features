@@ -21,8 +21,9 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
         }
         private void OnEnable()
         {
-            string[] paths = AssetDatabase.FindAssets("t:QuickAssetsSo").Select(x => AssetDatabase.GUIDToAssetPath(x)).ToArray();
-            _so = new SerializedObject(AssetDatabase.LoadAssetAtPath<Object>(paths[0]));
+            QuickAssetsSO so = ProjectSettingsUtility.LoadMyData();
+            //string[] paths = AssetDatabase.FindAssets("t:QuickAssetsSo").Select(x => AssetDatabase.GUIDToAssetPath(x)).ToArray();
+            _so = new SerializedObject(so);
             _assets = _so.FindProperty("_quickAssets");
             InitList();
         }
@@ -49,8 +50,13 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
             {
                 InitList();
             }
+            EditorGUI.BeginChangeCheck();
             _list.DoLayoutList();
-            _so.ApplyModifiedProperties();
+            if (EditorGUI.EndChangeCheck())
+            {
+                _so.ApplyModifiedProperties();
+                ProjectSettingsUtility.SaveMyData((QuickAssetsSO)_so.targetObject);
+            }
         }
         private void DrawElementCallback(Rect rect, int index, bool isActive, bool isFocused)
         {
