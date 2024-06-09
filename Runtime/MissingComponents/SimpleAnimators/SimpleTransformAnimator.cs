@@ -143,6 +143,13 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
             _timing.Stop();
         }
         /// <summary>
+        /// Resets the animation
+        /// </summary>
+        public void Clear()
+        {
+            _timing.Clear();
+        }
+        /// <summary>
         /// Set the destination values to the local position rotation and scale of the specified Transform component.
         /// </summary>
         /// <param name="transform">The Transform component used to feed the data from.</param>

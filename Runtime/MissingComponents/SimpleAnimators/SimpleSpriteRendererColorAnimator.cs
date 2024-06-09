@@ -101,5 +101,12 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         {
             _timing.Stop();
         }
+        /// <summary>
+        /// Resets the animation
+        /// </summary>
+        public void Clear()
+        {
+            _timing.Clear();
+        }
     }
 }
