@@ -1,3 +1,7 @@
+## [1.0.5] - 2024-06-10
+
+- created PoseData and fixed Instantiator
+
 ## [1.0.4] - 2024-06-10
 
 - added relative force option to ForceImpulsers
