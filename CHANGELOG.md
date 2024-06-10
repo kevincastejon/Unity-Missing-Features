@@ -1,3 +1,7 @@
+## [1.0.4] - 2024-06-10
+
+- added relative force option to ForceImpulsers
+
 ## [1.0.3] - 2024-06-09
 
 - fixed QuickAssetWindow by relocating the scriptaleobject asset into Assets folder instead of immutable Packages folder

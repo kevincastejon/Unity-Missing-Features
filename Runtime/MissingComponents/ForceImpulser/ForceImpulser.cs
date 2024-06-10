@@ -12,6 +12,8 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.ForceImpulsers
         [SerializeField] private Rigidbody _target;
         [Tooltip("The force to apply.")]
         [SerializeField] private Vector3 _force;
+        [Tooltip("Will the force be applied relatively to the Rigidbody2D coordinate system.")]
+        [SerializeField] private bool _useRelativeForce;
         [Tooltip("Will the force be applied on start.")]
         [SerializeField] private bool _applyImpulseOnStart;
 
@@ -23,6 +25,10 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.ForceImpulsers
         /// The force to apply.
         /// </summary>
         public Vector3 Force { get => _force; set => _force = value; }
+        /// <summary>
+        /// Will the force be applied relatively to the Rigidbody2D coordinate system.
+        /// </summary>
+        public bool UseRelativeForce { get => _useRelativeForce; set => _useRelativeForce = value; }
         /// <summary>
         /// Will the force be applied on start.
         /// </summary>
@@ -45,7 +51,14 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.ForceImpulsers
         /// </summary>
         public void ApplyImpulse()
         {
-            _target.AddForce(_force, ForceMode.Impulse);
+            if (_useRelativeForce)
+            {
+                _target.AddRelativeForce(_force, ForceMode.Impulse);
+            }
+            else
+            {
+                _target.AddForce(_force, ForceMode.Impulse);
+            }
         }
     }
 }
