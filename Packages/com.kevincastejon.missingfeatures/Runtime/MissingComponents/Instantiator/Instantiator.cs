@@ -52,7 +52,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
         /// <param name="transform">The Transform component used to feed the data from.</param>
         public void SetDestinationLocalFromTransform(Transform transform)
         {
-            _destination.SetTransformDataLocalFromTransform(transform);
+            _destination.SetPoseDataLocalFromTransform(transform);
         }
         /// <summary>
         /// Set the destination values to the global position rotation and scale of the specified Transform component.
@@ -60,7 +60,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
         /// <param name="transform">The Transform component used to feed the data from.</param>
         public void SetDestinationGlobalFromTransform(Transform transform)
         {
-            _destination.SetTransformDataGlobalFromTransform(transform);
+            _destination.SetPoseDataGlobalFromTransform(transform);
         }
     }
 }

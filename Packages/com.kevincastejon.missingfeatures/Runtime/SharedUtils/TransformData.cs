@@ -27,7 +27,7 @@ namespace KevinCastejon.MissingFeatures.SharedUtils
         /// </summary>
         public Vector3 Scale { get => _scale; set => _scale = value; }
         /// <summary>
-        /// Set the values to the local position rotation and scale of the specified Transform component.
+        /// Set the values to the local position, rotation and scale of the specified Transform component.
         /// </summary>
         /// <param name="transform">The Transform component used to feed the data from.</param>
         public void SetTransformDataLocalFromTransform(Transform transform)
@@ -37,7 +37,7 @@ namespace KevinCastejon.MissingFeatures.SharedUtils
             _scale = transform.localScale;
         }
         /// <summary>
-        /// Set the values to the local position rotation and scale of the specified Transform component.
+        /// Set the values to the global position, rotation and scale of the specified Transform component.
         /// </summary>
         /// <param name="transform">The Transform component used to feed the data from.</param>
         public void SetTransformDataGlobalFromTransform(Transform transform)
