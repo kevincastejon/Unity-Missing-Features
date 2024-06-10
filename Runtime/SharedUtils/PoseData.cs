@@ -22,19 +22,19 @@ namespace KevinCastejon.MissingFeatures.SharedUtils
         /// </summary>
         public Quaternion Rotation { get => _rotation; set => _rotation = value; }
         /// <summary>
-        /// Set the values to the local position rotation of the specified Transform component.
+        /// Set the values to the local position and rotation of the specified Transform component.
         /// </summary>
         /// <param name="transform">The Transform component used to feed the data from.</param>
-        public void SetTransformDataLocalFromTransform(Transform transform)
+        public void SetPoseDataLocalFromTransform(Transform transform)
         {
             _position = transform.localPosition;
             _rotation = transform.localRotation;
         }
         /// <summary>
-        /// Set the values to the local position rotation of the specified Transform component.
+        /// Set the values to the global position and rotation of the specified Transform component.
         /// </summary>
         /// <param name="transform">The Transform component used to feed the data from.</param>
-        public void SetTransformDataGlobalFromTransform(Transform transform)
+        public void SetPoseDataGlobalFromTransform(Transform transform)
         {
             _position = transform.position;
             _rotation = transform.rotation;
