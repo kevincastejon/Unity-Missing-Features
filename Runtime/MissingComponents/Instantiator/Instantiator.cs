@@ -12,40 +12,37 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
     {
         [Tooltip("Optional position, rotation and scale settings for the instances")]
         [SerializeField] private bool _useDestinationSetting;
-        [SerializeField] private TransformData _destination;
-        [Tooltip("Optional local/global settings for the instances positions and rotation")]
-        [SerializeField] private bool _useLocalScope;
+        [SerializeField] private PoseData _destination;
         [Tooltip("Optional parent settings for the instances")]
-        [SerializeField] private bool _useParentSetting;
         [SerializeField] private Transform _parent;
+        [Tooltip("Optional local/global settings for the instances positions and rotation")]
+        [SerializeField] private bool _worldPositionStays;
 
         /// <summary>
         /// Instantiates the target gameobject or prefab
         /// </summary>
         public void InstantiateObject(GameObject gameObject)
         {
-            GameObject go;
-            if (_useParentSetting)
+            if (_parent)
             {
-                go = Instantiate(gameObject, _parent);
-            }
-            else
-            {
-                go = Instantiate(gameObject);
-            }
-            if (_useDestinationSetting)
-            {
-                if (_useLocalScope)
+                if (_useDestinationSetting)
                 {
-                    go.transform.localPosition = _destination.Position;
-                    go.transform.localRotation = _destination.Rotation;
-                    go.transform.localScale = _destination.Scale;
+                    Instantiate(gameObject, _destination.Position, _destination.Rotation, _parent);
                 }
                 else
                 {
-                    go.transform.position = _destination.Position;
-                    go.transform.rotation = _destination.Rotation;
-                    go.transform.localScale = _destination.Scale;
+                    Instantiate(gameObject, _parent, _worldPositionStays);
+                }
+            }
+            else
+            {
+                if (_useDestinationSetting)
+                {
+                    Instantiate(gameObject, _destination.Position, _destination.Rotation);
+                }
+                else
+                {
+                    Instantiate(gameObject);
                 }
             }
         }
