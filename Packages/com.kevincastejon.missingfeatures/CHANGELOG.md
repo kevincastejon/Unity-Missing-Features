@@ -1,6 +1,7 @@
 ## [1.0.5] - 2024-06-10
 
 - created PoseData and fixed Instantiator
+- added ClearAndPlay methods on SimpleAnimators components
 
 ## [1.0.4] - 2024-06-10
 
