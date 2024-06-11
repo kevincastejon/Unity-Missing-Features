@@ -1,6 +1,6 @@
 {
   "name": "com.kevincastejon.missingfeatures",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "displayName": "Missing Features",
   "description": "A bunch of basic missing features.\n\nThere are many basic features that are missing natively.\nThis package provides many tools to fill these holes and improve productivity.\nIt contains programming utilitary attributes that limits the need of making custom editors, or custom windows and ready-to-use components and events that limits the need of scripting, pushing further the \"visual scripting\" approach.",
   "keywords": [
