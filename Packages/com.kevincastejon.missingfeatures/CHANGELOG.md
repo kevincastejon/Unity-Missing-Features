@@ -1,3 +1,8 @@
+## [1.0.6] - 2024-06-11
+
+- added ButtonClicker component
+- added public property for each serialized variable on the Instantiator component
+
 ## [1.0.5] - 2024-06-10
 
 - created PoseData and fixed Instantiator

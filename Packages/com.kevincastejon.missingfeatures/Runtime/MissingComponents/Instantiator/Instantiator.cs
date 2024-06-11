@@ -10,13 +10,31 @@ namespace KevinCastejon.MissingFeatures.MissingComponents
     /// </summary>
     public class Instantiator : MonoBehaviour
     {
-        [Tooltip("Optional position, rotation and scale settings for the instances")]
+        [Tooltip("Optional position, rotation and scale settings for the instances.")]
         [SerializeField] private bool _useDestinationSetting;
+        [Tooltip("A PoseData object holding the position and rotation for the instantied object.")]
         [SerializeField] private PoseData _destination;
-        [Tooltip("Optional parent settings for the instances")]
+        [Tooltip("Optional parent settings for the instances.")]
         [SerializeField] private Transform _parent;
-        [Tooltip("Optional local/global settings for the instances positions and rotation")]
+        [Tooltip("Optional local/global settings for the instances positions and rotation.")]
         [SerializeField] private bool _worldPositionStays;
+
+        /// <summary>
+        /// Optional position, rotation and scale settings for the instances.
+        /// </summary>
+        public bool UseDestinationSetting { get => _useDestinationSetting; set => _useDestinationSetting = value; }
+        /// <summary>
+        /// A PoseData object holding the position and rotation for the instantied object.
+        /// </summary>
+        public PoseData Destination { get => _destination; set => _destination = value; }
+        /// <summary>
+        /// Optional parent settings for the instances.
+        /// </summary>
+        public Transform Parent { get => _parent; set => _parent = value; }
+        /// <summary>
+        /// Optional local/global settings for the instances positions and rotation.
+        /// </summary>
+        public bool WorldPositionStays { get => _worldPositionStays; set => _worldPositionStays = value; }
 
         /// <summary>
         /// Instantiates the target gameobject or prefab
