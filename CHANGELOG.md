@@ -1,3 +1,7 @@
+## [1.0.7] - 2024-06-12
+
+- added SimpleLightAnimator component and related LightData class with inspector feeder
+
 ## [1.0.6] - 2024-06-11
 
 - added ButtonClicker component
