@@ -6,40 +6,25 @@ namespace KevinCastejon.MissingFeatures.MissingOperations
 {
     public class ResetTransformPreservingChildren : Editor
     {
-        [MenuItem("GameObject/Missing Operations/Reset Transform Preserving Children/Reset Local Transform")]
+        [MenuItem("GameObject/Missing Operations/Reset Local Transform Preserving Children")]
         private static void ResetLocalPosition()
         {
             GameObject selected = Selection.activeGameObject;
             Undo.RegisterFullObjectHierarchyUndo(selected, "Reset Local Transform Preserving Children");
             GameObject temp = new GameObject();
-            temp.transform.parent = selected.transform.parent;
-            foreach (Transform child in selected.transform)
+            int max = selected.transform.childCount;
+            for (int i = 0; i < max; i++)
             {
-                child.SetParent(temp.transform, true);
+                selected.transform.GetChild(0).SetParent(temp.transform, true);
             }
             selected.transform.localPosition = Vector3.zero;
-            foreach (Transform child in temp.transform)
+            selected.transform.localRotation = Quaternion.identity;
+            selected.transform.localScale = Vector3.one;
+            for (int i = 0; i < max; i++)
             {
-                child.SetParent(selected.transform, true);
+                temp.transform.GetChild(0).SetParent(selected.transform, true);
             }
-            DestroyImmediate(temp);
-        }
-        [MenuItem("GameObject/Missing Operations/Reset Transform Preserving Children/Reset Global Transform")]
-        private static void ResetGlobalPosition()
-        {
-            GameObject selected = Selection.activeGameObject;
-            Undo.RegisterFullObjectHierarchyUndo(selected, "Reset Global Transform Preserving Children");
-            GameObject temp = new GameObject();
-            foreach (Transform child in selected.transform)
-            {
-                child.SetParent(temp.transform, true);
-            }
-            selected.transform.localPosition = Vector3.zero;
-            foreach (Transform child in temp.transform)
-            {
-                child.SetParent(selected.transform, true);
-            }
-            DestroyImmediate(temp);
+            DestroyImmediate(temp); 
         }
     }
 }
