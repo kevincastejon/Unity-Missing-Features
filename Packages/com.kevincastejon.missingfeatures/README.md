@@ -143,6 +143,7 @@ A component that can apply impulse force on physics objects.
 	- **Simple Animators**<BR/>
 Components to use for simple A to B automatic animations
 		- **SimpleTransformAnimator** : A simple motion animator component for simple Transform animation
+		- **SimpleLightAnimator** : A simple light animator component for simple Light color animation
 		- **SimpleRendererColorAnimator** : A simple color animator component for simple Renderer color animation
 		- **SimpleSpriteRendererColorAnimator** : A simple color animator component for simple SpriteRenderer color animation
 	
@@ -154,3 +155,19 @@ Simple color setter components meant to be plugged to UnityEvent for setting col
 
 	- **Transform Teleporter**<BR/>
 Simple Transform teleporter component meant to be plugged to UnityEvent for setting position, rotation and/or scale.
+
+	- **Button Clicker**<BR/>
+A component that can click on a button.
+
+---
+
+- <u>**Missing Operations**</u><BR/>
+
+	- **Custom Editor Generator**<BR/>
+A contextual menu that generates a custom Editor script skeleton file for your Monobehaviour and ScriptableObject classes.
+
+	- **Custom PropertyDrawer Generator**<BR/>
+A contextual menu that generates a custom PropertyDrawer script skeleton file for your serializable classes.
+
+	- **Reset Transform Preserving Children**<BR/>
+A contextual menu that reset the Transform of a GameObject without modyfing its children.

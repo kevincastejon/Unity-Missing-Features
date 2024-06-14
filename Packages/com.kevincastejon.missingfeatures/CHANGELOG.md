@@ -1,3 +1,7 @@
+## [1.0.8] - 2024-06-14
+
+- added MissingOperations menus items (CustomEditorGenerator, CustomPropertyDrawerGenerator and ResetTransformPreservingChildren)
+
 ## [1.0.7] - 2024-06-12
 
 - added SimpleLightAnimator component and related LightData class with inspector feeder
