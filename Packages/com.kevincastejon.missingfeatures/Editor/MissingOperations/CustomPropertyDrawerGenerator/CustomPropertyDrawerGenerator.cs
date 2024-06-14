@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace KevinCastejon.EditorToolbox
+namespace KevinCastejon.MissingFeatures.MissingOperations
 {
     public class CustomPropertyDrawerGenerator : Editor
     {
