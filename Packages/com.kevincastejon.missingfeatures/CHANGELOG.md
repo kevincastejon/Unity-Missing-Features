@@ -1,3 +1,8 @@
+## [1.0.9] - 2024-06-15
+
+- added TileDuplicatorWindow
+- added GridSnapper
+
 ## [1.0.8] - 2024-06-14
 
 - added MissingOperations menus items (CustomEditorGenerator, CustomPropertyDrawerGenerator and ResetTransformPreservingChildren)
