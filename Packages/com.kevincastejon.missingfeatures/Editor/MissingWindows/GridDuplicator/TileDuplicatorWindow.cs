@@ -42,7 +42,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
                                 {
                                     continue;
                                 }
-                                GameObject tile = Instantiate(selected, selected.transform.position + new Vector3(EditorSnapSettings.gridSize.x * k, EditorSnapSettings.gridSize.y * j, EditorSnapSettings.gridSize.z * i), selected.transform.rotation);
+                                GameObject tile = Instantiate(selected,selected.transform.position + new Vector3(EditorSnapSettings.gridSize.x * k, EditorSnapSettings.gridSize.y * j, EditorSnapSettings.gridSize.z * i), selected.transform.rotation, selected.transform.parent);
                                 Undo.RegisterCreatedObjectUndo(tile, "Created object");
                                 tile.name += "[" + k + " - " + j + " - " + i + "]";
                             }
