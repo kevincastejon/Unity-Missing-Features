@@ -86,6 +86,9 @@ Exposes an custom assets list.
 	- **Transform Randomizer Window**<BR/>
 Allows position, rotation and scale randomizing.
 
+	- **Tile Duplicator Window**<BR/>
+Duplicates a GameObject in order to make a grid.
+
 ---
 
 - <u>**Missing Attributes**</u><BR/>
@@ -170,4 +173,7 @@ A contextual menu that generates a custom Editor script skeleton file for your M
 A contextual menu that generates a custom PropertyDrawer script skeleton file for your serializable classes.
 
 	- **Reset Transform Preserving Children**<BR/>
-A contextual menu that reset the Transform of a GameObject without modyfing its children.
+A contextual menu that resets the Transform of a GameObject without modyfing its children.
+
+	- **Grid Snapper**<BR/>
+A contextual menu that snaps the positions of GameObjects on the grid.
