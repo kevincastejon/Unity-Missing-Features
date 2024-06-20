@@ -13,9 +13,9 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [Tooltip("The Transform to animate. If omitted then the component's gameobject's Transform will be used.")]
         [SerializeField] private Transform _target;
         [Tooltip("The beginning state of the animation.")]
-        [SerializeField] private TransformData _origin;
+        [SerializeField] private TransformData _origin = new();
         [Tooltip("The end state of the animation.")]
-        [SerializeField] private TransformData _destination;
+        [SerializeField] private TransformData _destination = new();
         [Tooltip("Will use global scope for position and rotation.")]
         [SerializeField] private bool _useWorldCoordinates;
         [SerializeField] private Timer _timing = new();
