@@ -10,9 +10,9 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [Tooltip("The Light to animate. If omitted then the component's gameobject's first Light component will be used.")]
         [SerializeField] private Light _target;
         [Tooltip("The beginning state of the animation.")]
-        [SerializeField] private LightData _origin;
+        [SerializeField] private LightData _origin = new();
         [Tooltip("The end state of the animation.")]
-        [SerializeField] private LightData _destination;
+        [SerializeField] private LightData _destination = new();
         [SerializeField] private Timer _timing = new();
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
         [SerializeField] private bool _yoyo = true;
