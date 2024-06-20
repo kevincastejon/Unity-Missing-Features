@@ -17,7 +17,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [Tooltip("The end state of the animation.")]
         [SerializeField] private Color _to = Color.white;
 
-        [SerializeField] private Timer _timing;
+        [SerializeField] private Timer _timing = new();
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
         [SerializeField] private bool _yoyo = true;
         [Tooltip("The easing function to use for the animation.")]

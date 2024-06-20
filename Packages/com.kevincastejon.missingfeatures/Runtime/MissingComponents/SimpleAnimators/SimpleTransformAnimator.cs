@@ -18,7 +18,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [SerializeField] private TransformData _destination;
         [Tooltip("Will use global scope for position and rotation.")]
         [SerializeField] private bool _useWorldCoordinates;
-        [SerializeField] private Timer _timing;
+        [SerializeField] private Timer _timing = new();
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
         [SerializeField] private bool _yoyo = true;
         [Tooltip("The easing function to use for the animation.")]
