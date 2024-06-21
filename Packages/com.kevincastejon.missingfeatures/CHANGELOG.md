@@ -1,3 +1,7 @@
+## [1.0.10] - 2024-06-21
+
+- added UnityEventComponent
+
 ## [1.0.9] - 2024-06-15
 
 - added TileDuplicatorWindow

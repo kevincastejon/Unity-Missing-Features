@@ -162,6 +162,9 @@ Simple Transform teleporter component meant to be plugged to UnityEvent for sett
 	- **Button Clicker**<BR/>
 A component that can click on a button.
 
+	- **UnityEvent Component**<BR/>
+A simple component to hold and fire a UnityEvent as a component.
+
 ---
 
 - <u>**Missing Operations**</u><BR/>
