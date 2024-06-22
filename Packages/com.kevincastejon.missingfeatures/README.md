@@ -165,6 +165,9 @@ A component that can click on a button.
 	- **UnityEvent Component**<BR/>
 A simple component to hold and fire a UnityEvent as a component.
 
+	- **Parent Setter**<BR/>
+A component for setting the parent of a Transform
+
 ---
 
 - <u>**Missing Operations**</u><BR/>
