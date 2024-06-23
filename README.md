@@ -140,9 +140,13 @@ A component that can instantiate objects.
 	- **Destroyer**<BR/>
 A component that can destroy objects.
 
-	- **Force Impulser**<BR/>
-A component that can apply impulse force on physics objects.
-
+	- **Physics Components**<BR/>
+Components that can be used to manipulate physics objects through UnityEvents
+		- **ForceAdder** : A component that can add force and/or torque to physics objects.
+		- **ForceAdder2D** : A component that can add force and/or torque to 2D physics objects.
+		- **VelocitySetter** : A component that can sets the velocity and/or angular velocity to physics objects.
+		- **VelocitySetter2D** : A component that can sets the velocity and/or angular velocity to 2D physics objects.
+	
 	- **Simple Animators**<BR/>
 Components to use for simple A to B automatic animations
 		- **SimpleTransformAnimator** : A simple motion animator component for simple Transform animation

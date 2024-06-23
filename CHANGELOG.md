@@ -1,3 +1,7 @@
+## [1.0.13] - 2024-06-24
+
+- added VelocitySetters and reworked ForceAdders (formerly ForceImpulsers)
+
 ## [1.0.12] - 2024-06-23
 
 - added UpdateMode enum parameter to SimpleTransformAnimator
