@@ -21,6 +21,8 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [SerializeField] private Timer _timing = new();
         [Tooltip("Will the animation loop by playing the animation backward or will snap back to the beginning.")]
         [SerializeField] private bool _yoyo = true;
+        [Tooltip("In which cycle the animation will be updated")]
+        [SerializeField] private UpdateMode _updateMode;
         [Tooltip("The easing function to use for the animation.")]
         [SerializeField] private EasingType _easingType;
         [Tooltip("Will the animation automatically start.")]
@@ -53,6 +55,10 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         /// </summary>
         public bool Yoyo { get => _yoyo; set => _yoyo = value; }
         /// <summary>
+        /// In which cycle the animation will be updated
+        /// </summary>
+        public UpdateMode UpdateMode { get => _updateMode; set => _updateMode = value; }
+        /// <summary>
         /// The easing function to use for the animation.
         /// </summary>
         public EasingType EasingType { get => _easingType; set => _easingType = value; }
@@ -65,7 +71,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         /// </summary>
         public bool UseEulerAngles { get => _useEulerAngles; set => _useEulerAngles = value; }
         /// <summary>
-        /// Is tha animation playing
+        /// Is the animation playing
         /// </summary>
         public bool IsPlaying { get => _timing.IsRunning; }
         /// <summary>
@@ -85,6 +91,30 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
             }
         }
         private void Update()
+        {
+            if (_updateMode != UpdateMode.UPDATE)
+            {
+                return;
+            }
+            Animate();
+        }
+        private void FixedUpdate()
+        {
+            if (_updateMode != UpdateMode.FIXED_UPDATE)
+            {
+                return;
+            }
+            Animate();
+        }
+        private void LateUpdate()
+        {
+            if (_updateMode != UpdateMode.LATE_UPDATE)
+            {
+                return;
+            }
+            Animate();
+        }
+        private void Animate()
         {
             if (IsPlaying)
             {
