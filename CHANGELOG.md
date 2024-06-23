@@ -1,3 +1,7 @@
+## [1.0.12] - 2024-06-23
+
+- added UpdateMode enum parameter to SimpleTransformAnimator
+
 ## [1.0.11] - 2024-06-22
 
 - added ParentSetter
