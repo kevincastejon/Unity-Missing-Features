@@ -129,6 +129,9 @@ It offers a single layer selection instead of the multiple LayerMask selection.
 
 	- **Scene**<BR/>
 Displays a dropdown list of available build settings Scenes (must be used with a 'string' typed property).
+	
+	- **MethodCallButton**<BR/>
+Displays a button into the inspector that will call a method on click.
 
 ---
 
