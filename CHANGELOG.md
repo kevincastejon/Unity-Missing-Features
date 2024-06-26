@@ -1,3 +1,7 @@
+## [1.0.15] - 2024-06-26
+
+- removed MethodCallButtonAttribute because not working as a package
+
 ## [1.0.14] - 2024-06-26
 
 - added MethodCallButtonAttribute
