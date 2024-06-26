@@ -1,3 +1,7 @@
+## [1.0.14] - 2024-06-26
+
+- added MethodCallButtonAttribute
+
 ## [1.0.13] - 2024-06-24
 
 - added VelocitySetters and reworked ForceAdders (formerly ForceImpulsers)
