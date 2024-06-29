@@ -9,7 +9,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
             ShowPropConditionalAttribute att = (ShowPropConditionalAttribute)attribute;
-            bool show = (bool)property.serializedObject.targetObject.GetType().GetMethod(att.boolMethodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.GetProperty).Invoke(property.serializedObject.targetObject, null) == att.isTrue;
+            bool show = (bool)property.serializedObject.targetObject.GetType().GetMethod(att.boolMethodName, System.Reflection.BindingFlags.FlattenHierarchy | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.GetProperty).Invoke(property.serializedObject.targetObject, null) == att.isTrue;
             if (show)
             {
                 return EditorGUI.GetPropertyHeight(property, label, true);
@@ -19,7 +19,7 @@ namespace KevinCastejon.MissingFeatures.MissingAttributes
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             ShowPropConditionalAttribute att = (ShowPropConditionalAttribute)attribute;
-            bool show = (bool)property.serializedObject.targetObject.GetType().GetMethod(att.boolMethodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.GetProperty).Invoke(property.serializedObject.targetObject, null) == att.isTrue;
+            bool show = (bool)property.serializedObject.targetObject.GetType().GetMethod(att.boolMethodName, System.Reflection.BindingFlags.FlattenHierarchy | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.GetProperty).Invoke(property.serializedObject.targetObject, null) == att.isTrue;
             if (show)
             {
                 // On dessine la propriété
