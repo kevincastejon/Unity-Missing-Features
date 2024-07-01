@@ -1,3 +1,7 @@
+## [1.0.16] - 2024-07-01
+
+- added experimental PrefabSwitcherWindow
+
 ## [1.0.15] - 2024-06-26
 
 - removed MethodCallButtonAttribute because not working as a package

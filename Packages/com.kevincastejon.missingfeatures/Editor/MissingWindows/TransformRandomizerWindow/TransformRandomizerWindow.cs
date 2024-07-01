@@ -532,7 +532,7 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
             }
         }
 
-        [MenuItem("GameObject/Transform Randomizer/", false, 10)]
+        [MenuItem("GameObject/Transform Randomizer", false, 10)]
         private static void OpenFromContextMenu()
         {
             EditorWindow window = GetWindow(typeof(TransformRandomizerWindow));
