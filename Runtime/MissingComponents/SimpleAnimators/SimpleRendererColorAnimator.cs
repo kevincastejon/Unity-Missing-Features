@@ -24,6 +24,8 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
         [SerializeField] private EasingType _easingType;
         [Tooltip("Will the animation automatically start.")]
         [SerializeField] private bool _autoStart;
+        [Tooltip("Animate the emissive color instead of the base color.")]
+        [SerializeField] private bool _animateEmissiveColor;
 
         /// <summary>
         /// The Renderer to animate. If omitted then the component's gameobject's Renderer will be used.
@@ -84,7 +86,7 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.SimpleAnimators
                 {
                     t = 1f - t;
                 }
-                _target.material.color = Color.Lerp(_from, _to, t);
+                _target.material.SetColor(_animateEmissiveColor ? "_EmissionColor" : "_Color", Color.Lerp(_from, _to, t));
             }
         }
         /// <summary>

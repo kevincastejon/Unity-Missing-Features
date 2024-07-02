@@ -134,6 +134,14 @@ namespace KevinCastejon.MissingFeatures.MissingEvents
             _currentCount = 0;
         }
         /// <summary>
+        /// Makes the timer reset then play from the beginning.
+        /// </summary>
+        public void ClearAndRun()
+        {
+            Clear();
+            Run();
+        }
+        /// <summary>
         /// Has to be called in order to update a running timer
         /// </summary>
         /// <param name="deltaTime">The time elasped since the last call</param>
