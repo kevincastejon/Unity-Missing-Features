@@ -1,3 +1,8 @@
+## [1.0.17] - 2024-07-02
+
+- added ClearAndRun methods tp Timer and TimerEvent classes.
+- added emissive color feature for SimpleColorSetters and SimpleColorAnimators
+
 ## [1.0.16] - 2024-07-01
 
 - added experimental PrefabSwitcherWindow

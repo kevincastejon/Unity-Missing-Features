@@ -32,7 +32,16 @@ namespace KevinCastejon.MissingFeatures.MissingComponents.ColorSetters
         public void SetColor(int colorIndex)
         {
             if (_colors == null || _colors.Length == 0) { return; }
-            _target.material.color = _colors[colorIndex % _colors.Length];
+            _target.material.SetColor("_Color", _colors[colorIndex % _colors.Length]);
+        }
+        /// <summary>
+        /// Sets the material emissive color to specified index. A modulo is used to ensure no out of bound index errors.
+        /// </summary>
+        /// <param name="colorIndex"></param>
+        public void SetEmissiveColor(int colorIndex)
+        {
+            if (_colors == null || _colors.Length == 0) { return; }
+            _target.material.SetColor("_EmissionColor", _colors[colorIndex % _colors.Length]);
         }
         public void Reset()
         {

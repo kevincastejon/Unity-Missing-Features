@@ -83,7 +83,7 @@ namespace KevinCastejon.MissingFeatures.MissingEvents
         /// <summary>
         /// Makes the timer running. If previously run and stopped, this will resume the timer, call Clear() to reset.
         /// </summary>
-        [ContextMenu("Play")]
+        [ContextMenu("Run")]
         public void Run()
         {
             _timer.Run();
@@ -103,6 +103,14 @@ namespace KevinCastejon.MissingFeatures.MissingEvents
         public void Clear()
         {
             _timer.Clear();
+        }
+        /// <summary>
+        /// Makes the timer reset then play from the beginning.
+        /// </summary>
+        [ContextMenu("Clear")]
+        public void ClearAndRun()
+        {
+            _timer.ClearAndRun();
         }
     }
 }
