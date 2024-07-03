@@ -107,7 +107,7 @@ namespace KevinCastejon.MissingFeatures.MissingEvents
         /// <summary>
         /// Makes the timer reset then play from the beginning.
         /// </summary>
-        [ContextMenu("Clear")]
+        [ContextMenu("ClearAndRun")]
         public void ClearAndRun()
         {
             _timer.ClearAndRun();

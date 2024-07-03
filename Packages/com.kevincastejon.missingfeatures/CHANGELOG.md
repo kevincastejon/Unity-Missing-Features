@@ -1,3 +1,7 @@
+## [1.0.18] - 2024-07-03
+
+- minor fixes and improvements
+
 ## [1.0.17] - 2024-07-02
 
 - added ClearAndRun methods tp Timer and TimerEvent classes.

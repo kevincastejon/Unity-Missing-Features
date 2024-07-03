@@ -234,8 +234,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 827638970}
   _force: {x: 2, y: 10, z: 1}
+  _torque: {x: 0, y: 0, z: 0}
   _useRelativeForce: 0
-  _applyImpulseOnStart: 0
+  _forceMode: 1
 --- !u!114 &169070491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,9 +314,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 169070490}
-        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.ForceImpulsers.ForceImpulser,
+        m_TargetAssemblyTypeName: KevinCastejon.MissingFeatures.MissingComponents.PhysicsComponents.ForceAdder,
           com.kevincastejon.missingfeatures.runtime
-        m_MethodName: ApplyImpulse
+        m_MethodName: AddForce
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -530,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 827638969}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
