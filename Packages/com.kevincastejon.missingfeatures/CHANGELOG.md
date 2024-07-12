@@ -1,3 +1,9 @@
+## [1.0.19] - 2024-07-12
+
+- Added BetterToggleGroup component
+- Implemented preString and postString fields for DebugLogger
+- fixed ShowPropConditional and ReadOnlyConditional attributes not finding methods in parent class (PR from GitHub user Jazz23)
+
 ## [1.0.18] - 2024-07-03
 
 - minor fixes and improvements
