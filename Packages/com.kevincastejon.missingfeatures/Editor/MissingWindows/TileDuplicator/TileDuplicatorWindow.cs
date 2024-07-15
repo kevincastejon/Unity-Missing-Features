@@ -1,9 +1,7 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 namespace KevinCastejon.MissingFeatures.MissingWindows
 {
@@ -42,7 +40,17 @@ namespace KevinCastejon.MissingFeatures.MissingWindows
                                 {
                                     continue;
                                 }
-                                GameObject tile = Instantiate(selected,selected.transform.position + new Vector3(EditorSnapSettings.gridSize.x * k, EditorSnapSettings.gridSize.y * j, EditorSnapSettings.gridSize.z * i), selected.transform.rotation, selected.transform.parent);
+                                GameObject tile;
+                                if (PrefabUtility.IsAnyPrefabInstanceRoot(selected))
+                                {
+                                    tile = (GameObject)PrefabUtility.InstantiatePrefab(PrefabUtility.GetCorrespondingObjectFromSource(selected), selected.transform.parent);
+                                    tile.transform.position = selected.transform.position + new Vector3(EditorSnapSettings.gridSize.x * k, EditorSnapSettings.gridSize.y * j, EditorSnapSettings.gridSize.z * i);
+                                    tile.transform.rotation = selected.transform.rotation;
+                                }
+                                else
+                                {
+                                    tile = Instantiate(selected, selected.transform.position + new Vector3(EditorSnapSettings.gridSize.x * k, EditorSnapSettings.gridSize.y * j, EditorSnapSettings.gridSize.z * i), selected.transform.rotation, selected.transform.parent);
+                                }
                                 Undo.RegisterCreatedObjectUndo(tile, "Created object");
                                 tile.name += "[" + k + " - " + j + " - " + i + "]";
                             }

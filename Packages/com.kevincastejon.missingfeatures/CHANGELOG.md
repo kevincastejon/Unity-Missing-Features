@@ -1,3 +1,7 @@
+## [1.0.20] - 2024-07-15
+
+- Fixed TileDuplicator for prefab instances
+- Added dedicated asset type handle for experimental PrefabSwitcherWindow
 ## [1.0.19] - 2024-07-12
 
 - Added BetterToggleGroup component
