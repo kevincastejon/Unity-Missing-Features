@@ -173,8 +173,11 @@ A simple component to hold and fire a UnityEvent as a component.
 	- **Parent Setter**<BR/>
 A component for setting the parent of a Transform
 
-	- **BetterToggleGroup*<BR/>
+	- **Better Toggle Group*<BR/>
 A component inspired by the native ToggleGroup component, but allowing events firing at group level.
+
+	- **Dont Destroy On Load Component*<BR/>
+A component that places its related gameobject into the DontDestroyOnLoad scene on Start.
 
 ---
 
